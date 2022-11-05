@@ -10,26 +10,6 @@
 // }
 
 {
-  "extends": ["react-app", "react-app/jest", "plugin:jsx-a11y/recommended", "prettier"],
-  "plugins": ["jsx-a11y", "prettier"],
-  "rules": {
-    "semi": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "prettier/prettier": [
-      "error",
-      {
-        "semi": false
-      }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
-  },
   "settings": {
     "import/resolver": {
       "typescript": {},
@@ -38,5 +18,20 @@
         "moduleDirectory": ["node_modules", "src/"]
       }
     }
+  },
+  "extends": ["react-app", "react-app/jest", "plugin:jsx-a11y/recommended", "prettier"],
+  "plugins": ["jsx-a11y", "prettier"],
+  "rules": {
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   }
 }
