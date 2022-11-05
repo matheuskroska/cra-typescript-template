@@ -38,9 +38,11 @@
     ],
     "*.js": "eslint --fix"
   },
-  "extends": [
-    "@commitlint/config-conventional"
-  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
