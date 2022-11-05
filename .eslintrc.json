@@ -1,32 +1,51 @@
-{
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  },
-  "extends": ["react-app", "react-app/jest", "prettier"]
-}
-
 // {
-//   "extends": ["react-app", "airbnb", "plugin:jsx-a11y/recommended", "prettier"],
-//   "plugins": ["jsx-a11y", "prettier"],
-//   "rules": {
-//     "semi": 0,
-//     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-//     "prettier/prettier": [
-//       "error",
-//       {
-//         "semi": false
-//       }
-//     ]
-//   },
 //   "settings": {
 //     "import/resolver": {
 //       "node": {
 //         "extensions": [".js", ".jsx", ".ts", ".tsx"]
 //       }
 //     }
-//   }
+//   },
+//   "extends": ["react-app", "react-app/jest", "prettier"]
 // }
+
+{
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["jsx-a11y", "prettier"],
+  "rules": {
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}
