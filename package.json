@@ -23,24 +23,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix",
     "pretty": "prettier --write .",
-    "pre-commit": "lint-staged",
     "prepare": "husky install",
-    "commit": "git-cz",
-    "prettier:check": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write .",
-    "linte": "npx eslint ."
+    "lint-staged": "git-cz",
+    "commitzen": "git-cz"
   },
   "lint-staged": {
-    "*.{css,less,scss,html,json,jsx,js}": [
-      "prettier --write ."
-    ],
-    "*.js": "eslint --fix ."
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "eslintConfig": {
@@ -62,15 +54,12 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-conventional": "^17.2.0",
-    "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
