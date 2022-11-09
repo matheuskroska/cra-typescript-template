@@ -23,11 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix",
+    "lint": "eslint --fix .",
     "pretty": "prettier --write .",
     "prepare": "husky install",
-    "lint-staged": "git-cz",
-    "commitzen": "git-cz"
+    "lint-staged": "lint-staged",
+    "commit": "git-cz"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

@@ -2,8 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint-staged
-# npm run commitzen
-
-
-
-# exec < /dev/tty && npx git-cz --hook || true
